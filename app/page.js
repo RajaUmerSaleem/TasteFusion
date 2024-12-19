@@ -16,16 +16,15 @@ export default function Home() {
 
     if (user) {
       if (role === 'admin') {
-        router.push('/admindash'); 
+        router.push('/admindash');
       } else if (role === 'cashier') {
-        router.push('/cashierdash'); 
+        router.push('/cashierdash');
       }
+    }
+    else if (role === 'admin' && username === 'admin' && password === 'admin') {
+      router.push('/admindash');
     } else {
       alert('Invalid credentials');
-    }
-
-    if(role==='admin'&&username==='admin'&&password==='admin'){
-      router.push('/admindash');
     }
   };
 
